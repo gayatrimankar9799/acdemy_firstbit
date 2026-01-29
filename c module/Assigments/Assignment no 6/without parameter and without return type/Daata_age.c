@@ -1,0 +1,37 @@
+//Accept the age and check if the person is:
+//Child (age < 12),Teenager (12–19),Adult (20–59),Senior (60 and above) using 
+#include<stdio.h>
+void daata();
+void main()
+{
+	daata();
+}
+void daata()
+{
+
+	int age;
+	printf("Enter the age");
+	scanf("%d",&age);
+	if(age<12)
+	{
+		printf("Child");
+	}
+	else
+	{
+	  if(age>=12 && age<=19)
+	 	{
+	  		printf("teenager");
+		}	
+		else
+		{
+			if(age>=20 && age<=59)
+			{
+					printf("Adult");
+			}
+			else
+			{
+					printf("senoir");
+			}
+		}
+	}
+}
