@@ -1,0 +1,37 @@
+//Calculating total salary based on basic. If basic <=5000 da, ta and hra will be
+//10%,20% and 25% respectively otherwise da, ta and hra will be 15%,25% and 30% respectively.
+#include<stdio.h>
+double sal(); //declaration
+
+void main()
+{
+    double total;
+    total = sal(); //calling
+} //main end here
+
+double sal() //function definition
+{
+    double bs;
+    printf("Enter basic salary: ");
+    scanf("%lf", &bs);
+
+    double da, hra, ta, ts;
+
+    if(bs <= 5000)
+    {
+        da = bs * 0.10;
+        ta = bs * 0.20;
+        hra = bs * 0.25;
+    }
+    else
+    {
+        da = bs * 0.15;
+        ta = bs * 0.25;
+        hra = bs * 0.30;
+    }
+
+    ts = bs + da + hra + ta;
+    printf("Total Salary: %lf", ts);
+
+    return ts;
+}
